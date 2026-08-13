@@ -139,13 +139,7 @@ export default function PosClient({
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <header className="sticky top-0 z-20 flex items-center justify-between border-b bg-white px-4 py-3">
-        <div>
-          <h1 className="font-bold text-emerald-600">{businessName}</h1>
-          <p className="text-xs text-slate-500">Kasir 5 Menit</p>
-        </div>
-        <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">Kasir</span>
-      </header>
+
 
       <main className="mx-auto grid max-w-7xl gap-5 p-4 lg:grid-cols-[1fr_380px]">
         <section className="space-y-4">
