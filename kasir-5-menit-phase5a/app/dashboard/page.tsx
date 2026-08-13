@@ -1,6 +1,7 @@
 import { getBusinessContext } from '@/lib/business-context';
 import { createClient } from '@/lib/supabase/server';
 import PosClient from '@/components/pos-client';
+import AppNav from '@/components/app-nav';
 
 export default async function DashboardPage() {
   const { business } = await getBusinessContext();
@@ -19,10 +20,14 @@ export default async function DashboardPage() {
   }
 
   return (
+  <div className="min-h-screen bg-slate-50">
+    <AppNav businessName={business.name} />
+
     <PosClient
       businessId={business.id}
       businessName={business.name}
       menus={(menus ?? []) as any}
     />
-  );
+  </div>
+);
 }
